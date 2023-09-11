@@ -1,0 +1,161 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  text-decoration-color: #333333;
+  overflow-x: hidden;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2 {
+  font-size: 55px;
+  font-style: normal;
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+
+h4, .h4 {
+  font-size: 26px;
+  line-height: 130%;
+  color: #1D9D73;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.maintext {
+  font-size: 18px;
+  color: #888888;
+  margin: 0 0 20px 0;
+  line-height: 150%;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.row{
+	margin: 0 -10px;
+	font-size: 0;
+}
+
+.col{
+	font-size: 16px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 10px;
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header-logo {
+  max-height: 38.2px;
+}
+
+.header-nav_ul {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.header-nav_li {
+  list-style: none;
+}
+
+.header-nav_link {
+  text-decoration: none;
+  color:  #333333;
+  transition: 0.2s;
+}
+
+.header-nav_link:hover {
+  color: #1D9D73;
+}
+
+.about {
+  margin: 100px 0;
+}
+
+.about-container {
+  display: flex;
+  padding-right: max(30px, calc((100% - 1150px) / 2));
+}
+
+.about-images {
+  min-height: 480px;
+  width: calc(100% - 550px - 100px);
+}
+
+.about-textblock {
+  flex-shrink: 0;
+  width: 550px;
+  margin-left: 100px;
+  min-height: 340px;
+
+  display: flex;
+  align-content: start;
+  justify-content: center;
+  flex-direction: column; 
+}
+
+.img_background {
+  background-image: url(../img/aboutMain.jpg);
+  
+  max-width: 635px;
+  height: 435px;
+  position: relative;
+  margin-left: auto;
+
+  background-position:
+    top right,
+    0px 0px;
+  background-origin: content-box, padding-box;
+}
+
+.img_background::after {
+  content: url(../img/aboutMini.jpg);
+  position: absolute;
+
+  max-width: 475px;
+  height: 325px;
+  top:107px;
+  left:-190px;
+
+  box-shadow: 17px -5px 21px -1px rgba(0, 0, 0, 0.3);
+}
+
+
+@media screen and (max-width: 1600px) {
+  .img_background::after {
+    left:-300px;
+    top:150px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .img_background::after {
+    display: none;
+  }
+
+  .about-textblock {
+    margin-left: 50px;
+}
+
+
+}
